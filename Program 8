@@ -1,0 +1,44 @@
+/*Hotel Specification Problem*/
+#include<bits/stdc++.h>
+using namespace std;
+class Hotel
+{ private:
+  int Rno;
+  string Name;
+  float Tariff;
+  int NOD;
+  float CALC(int NOD,float Tarrif)      // CALC Function to display Amount //
+  {
+     if(NOD*Tariff>10000)
+     {
+        cout<<"Amount is "<<1.05*NOD*Tariff<<endl;
+     }
+     else{
+         cout<<"Amount is "<<NOD*Tariff<<endl;
+     }
+  }
+  public:
+  
+  void checkin(int Rno,string Name,float Tariff,int NOD)    // Checkin Function to get values //
+   {
+    this->Rno=Rno;
+    this->Name=Name;
+    this->Tariff=Tariff;
+    this->NOD=NOD;
+   }
+
+ void checkout()                                        // Checkout Function to print values //
+ {
+    cout<<"Room number is :"<<Rno<<endl;
+    cout<<"Name:"<<Name<<endl;
+    cout<<"Per day charges are "<<Tariff<<endl;
+    cout<<"Total Number of days stayed were "<<NOD<<endl;
+    CALC((18),(3000.00));
+ }
+};
+int main()
+{
+    Hotel p1;                        // Object construction and calling //
+    p1.checkin((1500),("Abhinav Singh Negi"),(3000.00),(18));
+    p1.checkout();
+}
