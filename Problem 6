@@ -1,0 +1,29 @@
+/*Problem Based on Data Abstraction*/
+#include<bits/stdc++.h>
+using namespace std;
+class Bank_Account
+{
+private:           // Private access modifier used to keep this class member private //
+  double Balance;
+public:            // Public access modifier used to keep these class member public to everyone //
+  string Name;
+  int Account_Num;
+  Bank_Account(string Name,int Account_Num,double Balance)  // It is a constructor used to initialise value //
+  {
+    this->Name=Name;
+    this->Account_Num=Account_Num;
+    this->Balance=Balance;
+  }
+  void display()            // Display function to print the content //
+  {
+    cout<<"Name:"<<Name<<endl;
+    cout<<"Account Number:"<<Account_Num<<endl;
+    cout<<"Balance :"<<Balance<<endl;
+  }
+};
+int main()
+{
+  Bank_Account p1(("Abhinav Singh Negi"),(410834),(50000));        // Object calling //
+  p1.display();                                                    // Display function calling //
+  return 0; 
+}
